@@ -10,9 +10,10 @@ function New({items,setItems}) {
     return (
         <>
             
-            <h2>New</h2>
-            <input value={input} onChange={(e)=>setInput(e.target.value)}/>
-            <button onClick={AddNew}>Add</button>
+            <h2 style={{color:'aliceblue', padding:'5px'}}>New Note</h2>
+            <input style={{color:'white',height:'500px',width:'400px', paddingLeft:'20px',backgroundColor:'rgba(0,0,0,0.05)'}}value={input} onChange={(e)=>setInput(e.target.value)}/>
+            <br/>
+            <button style={{color:'aliceblue',backgroundColor:'rgb(83, 0, 0)',margin:'0',padding:'0',height:'20px'}} onClick={AddNew}>Add</button>
         </>
     )
 }

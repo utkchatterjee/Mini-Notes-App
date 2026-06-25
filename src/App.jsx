@@ -4,25 +4,22 @@ import New from './pages/New.jsx';
 import NoteID from './pages/NoteID.jsx';
 import {useState} from 'react';
 import Navbar from './Components/Navbar.jsx';
+import './index.css'
 
 function App() {
     const [items,setItems]=useState([]);
     const router=createBrowserRouter([
         {
             path:'/',
-            element: <><Navbar/><Home/></>
-        },
-        {
-            path:'/home',
-            element: <><Navbar/><Home/></>
+            element: <div className="Wrapper"><Navbar/><Home/></div>
         },
         {
             path:'/new',
-            element: <><Navbar/><New items={items} setItems={setItems}/></>
+            element: <div className="Wrapper"><Navbar/><New items={items} setItems={setItems}/></div>
         },
         {
             path:'/note/:id',
-            element: <><Navbar/><NoteID items={items} setItems={setItems}/></>
+            element: <div className="Wrapper"><Navbar/><NoteID items={items} setItems={setItems}/></div>
         },
     ])
     return (

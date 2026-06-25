@@ -18,7 +18,7 @@ function NoteID({items,setItems}) {
         <>
         
             <h2>NoteID: {id}</h2>
-            <ul>
+            <ul style={{color:'white'}}>
                 {items.map((item,index)=>(
                     <li key:index>{item} 
                 <button onClick={()=>deleteitem(index)}>Delete</button>
